@@ -13,7 +13,6 @@ class RazorPay implements PaymentMethod{
 }
 
 class PayPal implements PaymentMethod{
-
     public void pay(){
         System.out.println("Payment done using PayPal");
     }
