@@ -10,7 +10,7 @@ public class Abstraction extends Test{
     public  void display() {
         System.out.println("Implemented Parent Method");
     }
-
+    
     public static void main(String[] args) {
         Test test = new Abstraction();
         test.display();
