@@ -1,6 +1,4 @@
 ### Main Objective
-Develop a comprehensive Student Management Portal to streamline and enhance the management of student-related activities.
-
 ---
 
 ### Sprint 1: User Authentication and Home Page UI
@@ -121,5 +119,3 @@ Develop a comprehensive Student Management Portal to streamline and enhance the 
 - Implement more robust data validation techniques.
 
 ---
-
-Feel free to ask if you need more details or have any questions!
