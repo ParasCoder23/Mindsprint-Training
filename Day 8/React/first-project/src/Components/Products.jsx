@@ -8,7 +8,6 @@ function Products() {
     const fetchData = async () => {
         try{
             const res = await axios.get('https://dummyjson.com/products');
-            // console.log(res);
             setProducts(res.data.products)
         }
         catch(err){
