@@ -7,27 +7,27 @@ class Account{
     private String holderName;
     private int balance;
 
-    public long getAccountNo() {
+    public long getAccountNo(){
         return accountNo;
     }
 
-    public void setAccountNo(long accountNo) {
+    public void setAccountNo(long accountNo){
         this.accountNo = accountNo;
     }
 
-    public String getHolderName() {
+    public String getHolderName(){
         return holderName;
     }
 
-    public void setHolderName(String holderName) {
+    public void setHolderName(String holderName){
         this.holderName = holderName;
     }
 
-    public int getBalance() {
+    public int getBalance(){
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(int balance){
         this.balance = balance;
     }
 }
@@ -38,7 +38,7 @@ interface AccountDetails{
 }
 
 class Savings extends Account implements AccountDetails{
-    public Savings(long accountNo, String holderName, int balance) {
+    public Savings(long accountNo, String holderName, int balance){
         super();
         this.setAccountNo(accountNo);
         this.setHolderName(holderName);
@@ -46,7 +46,7 @@ class Savings extends Account implements AccountDetails{
     }
 
     @Override
-    public void withdraw(int amount) {
+    public void withdraw(int amount){
         if(amount < getBalance()) {
             System.out.println("Withdrawed " + amount + " From Account No : " + getAccountNo());
             int remained = getBalance() - amount;
@@ -63,7 +63,7 @@ class Savings extends Account implements AccountDetails{
     }
 
     @Override
-    public void deposit(int amount) {
+    public void deposit(int amount){
         System.out.println("Deposited " + amount + " To Account No : " + getAccountNo());
         int remained = getBalance() + amount;
         setBalance(remained);
@@ -72,7 +72,7 @@ class Savings extends Account implements AccountDetails{
 }
 
 class Current extends Account implements AccountDetails{
-    public Current(long accountNo, String holderName, int balance) {
+    public Current(long accountNo, String holderName, int balance){
         super();
         this.setAccountNo(accountNo);
         this.setHolderName(holderName);
@@ -80,8 +80,8 @@ class Current extends Account implements AccountDetails{
     }
 
     @Override
-    public void withdraw(int amount) {
-        if (amount < this.getBalance()) {
+    public void withdraw(int amount){
+        if (amount < this.getBalance()){
             System.out.println("Withdrawed " + amount + " From Account No : " + getAccountNo());
             int remained = getBalance() - amount;
             setBalance(remained);
@@ -92,7 +92,7 @@ class Current extends Account implements AccountDetails{
         }
     }
     @Override
-    public void deposit(int amount) {
+    public void deposit(int amount){
         System.out.println("Deposited " + amount + " To Account No : " + getAccountNo());
         int remained = getBalance() + amount;
         setBalance(remained);
@@ -100,8 +100,8 @@ class Current extends Account implements AccountDetails{
     }
 }
 
-public class AccountPractice {
-    public static void main(String[] args) {
+public class AccountPractice{
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter Account No : ");
@@ -148,6 +148,5 @@ public class AccountPractice {
         else{
             System.out.println("Wrong Account type choosed");
         }
-
     }
 }
